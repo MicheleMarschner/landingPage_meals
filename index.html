@@ -15,7 +15,11 @@
             <p>Choose from 80+ weekly meals with hight quality ingredients and options for every 
                 lifestyle, including vegetarian, carb conscious, Heat & Eat, and more</p>
             <button class="button-primary">view plans</button>
-        </div>     
+        </div> 
+
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="./assets/images/icons8-up-50.png" alt=""></button>
+       
+    </div>    
     </section>
 
     <section class="call-to-action">
@@ -29,7 +33,7 @@
             
             <div class="cards">
                 <div class="item">
-                    <img class="icon icon-1" src="./assets/images/Icon-RecipeCards-01.png'"/>
+                    <img class="icon icon-1" src="./assets/images/Icon-RecipeCards-01.png"/>
                     <div>
                         <h6>A variety of delicious dishes.</h6>
                         <p>Choose from our rotating menus of chef-inspired recipes.</p>
@@ -63,35 +67,43 @@
 
             <div class="cards">
                 <div class="item">
-                    <div class="icon icon-1"></div>
-                    <h6>No shopping necessary</h6>
-                    <p>Skip the store and skip stress of meal planning. We'll deliver what you need to 
-                        your door. 
-                    </p>          
+                    <img class="icon icon-1" src="./assets/images/Icon-RecipeCards-01.png"/>
+                    <div>
+                        <h6>No shopping necessary</h6>
+                        <p>Skip the store and skip stress of meal planning. We'll deliver what you need to 
+                            your door. 
+                        </p> 
+                    </div>         
                 </div>
 
                 <div class="item">
-                    <div class="icon icon-2"></div>
-                    <h6>Easy-to-follow recipes</h6>
-                    <p>Our recipes are quick and easy to make with step-by-step directions (and even the littlest 
-                        cooks can help).
-                    </p>          
+                    <img class="icon icon-2" src="./assets/images/Icon-Skip-Delivery.png"/> 
+                    <div>
+                        <h6>Easy-to-follow recipes</h6>
+                        <p>Our recipes are quick and easy to make with step-by-step directions (and even the littlest 
+                            cooks can help).
+                        </p>
+                    </div>          
                 </div>
 
                 <div class="item">
-                    <div class="icon icon-3"></div>
-                    <h6>Meals in a pinch</h6>
-                    <p>Get dinner on the table in a snap. Our meals take only an average of 35 minutes 
-                        to prepare.
-                    </p>          
+                    <img class="icon icon-3" src="./assets/images/Icon-Variety.png"/>
+                    <div>
+                        <h6>Meals in a pinch</h6>
+                        <p>Get dinner on the table in a snap. Our meals take only an average of 35 minutes 
+                            to prepare.
+                        </p>
+                    </div>          
                 </div>
 
                 <div class="item">
-                    <div class="icon icon-4"></div>
-                    <h6>Quality ingredients</h6>
-                    <p>You get sustainably farmed proteins, seasonally inspired produce, and unique ingredients 
-                        delivered right to your door.
-                    </p>          
+                    <img class="icon icon-3" src="./assets/images/Icon-Variety.png"/>
+                    <div>
+                        <h6>Quality ingredients</h6>
+                        <p>You get sustainably farmed proteins, seasonally inspired produce, and unique ingredients 
+                            delivered right to your door.
+                        </p>
+                    </div>          
                 </div>
 
             </div>
@@ -108,7 +120,34 @@
         </div>
     </section>
 
-    <section></section>
-    <footer></footer>
+    <section class="newsletter-signup">
+        <div class="content">
+            <h6>See what's cooking</h6>
+            <p>Sign up for exclusive offers, recipes, 
+                news, and more</p>
+        </div>
+        <div class="form">
+            <form action="POST">
+                <input type="text" value="Enter email" onfocus="if(this.value == 'Enter email'){this.value = '';}">
+                <button class="button-primary">submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="logo"><img src="./assets/images/foodiefeast-high-resolution-logo-white-transparent.png" alt="">
+        </div>
+        <div class="copyright">
+            &copy; Copyright <strong><span>Blue Apron</span></strong> All Rights Reserved
+        </div>
+        <div class="social">
+            <a href="/"><div class="social-item social-item-1"></div></a>
+            <a href="/"><div class="social-item social-item-2"></div></a>
+            <a href="/"><div class="social-item social-item-3"></div></a>
+            <a href="/"><div class="social-item social-item-4"></div></a>
+        </div>
+    </footer>
+
+    <script src="./index.js"></script>
 </body>
 </html>
