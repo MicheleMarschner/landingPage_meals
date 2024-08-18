@@ -1,3 +1,6 @@
+/* Wireframe with Figma: https://www.figma.com/design/Q6qeeTOU8OrdXfIUiKJy07/landingPage_meals?node-id=1-2&t=ZYg3cpOAcPRVKLfC-0 */
+
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 
@@ -76,20 +79,6 @@ button.button-primary:hover {
     cursor: pointer;
 }
 
-/*
-button .button-secondary {
-
-}
-*/
-
-
-@media (min-width: 1025px) {
-    .box {
-        margin: 0 15rem; 
-    }
-
-}
-
 /*----------------------------------------
 ### Special classes
 ----------------------------------------*/
@@ -102,7 +91,7 @@ button .button-secondary {
     height: 2.5rem;
 }
 
-#myBtn {
+#scrollBtn {
     display: none; /* Hidden by default */
     position: fixed; /* Fixed/sticky position */
     bottom: 20px; /* Place the button at the bottom of the page */
@@ -116,13 +105,16 @@ button .button-secondary {
     padding: 10px; /* Some padding */
     border-radius: 50%; /* Rounded corners */
     font-size: 18px; /* Increase font size */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
   }
   
-  #myBtn:hover {
+  #scrollBtn:hover {
     background-color: var(--primary); /* Add a dark-grey background on hover */
+    -webkit-transform: translateY(-2px);
+	transform: translateY(-2px);
   }
 
-  #myBtn img {
+  #scrollBtn img {
     height: 30px;
     color: var(--primary);
   }
@@ -131,6 +123,10 @@ button .button-secondary {
 /*----------------------------------------
 ### Header
 ----------------------------------------*/
+
+header {
+    padding: 3rem 5rem;
+}
 
 .header {
     background-image: url('./assets/images/Hero.png');
@@ -178,6 +174,7 @@ button .button-secondary {
 }
 
 .call-to-action h2 {
+    text-align: center;
     font-size: 1.6rem;
     color: var(--primary);
     margin-bottom: 0.3rem; 
@@ -225,15 +222,6 @@ button .button-secondary {
     font-size: 0.83rem;
 }
 
-
-@media (min-width: 1025px) {
-    .call-to-action .box > p {
-        max-width: 40rem;
-    }
-
-}
-
-
 /*----------------------------------------
 ### Selling points
 ----------------------------------------*/
@@ -250,6 +238,7 @@ button .button-secondary {
 }
 
 .selling-points h2 {
+    text-align: center;
     font-size: 1.6rem;
     text-transform: uppercase;
     letter-spacing: 0.1cm;
@@ -272,12 +261,9 @@ button .button-secondary {
     gap: 1rem;
     align-items: center;
     text-align: center;
-
-    border: black solid;
 }
 
 .selling-points .cards .item div {
-    background-color: red;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -296,8 +282,6 @@ button .button-secondary {
 
 .selling-points .cards .item h6 {
     flex-grow: 1;
-    
-    border: solid black;
 }
 
 .selling-points .cards .item p {
@@ -324,7 +308,6 @@ button .button-secondary {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 9rem 15rem;
 }
 
 .call-to-action-banner .box {
@@ -360,13 +343,6 @@ button .button-secondary {
     line-height: 0.5cm;
 }
 
-
-@media (min-width: 1025px) {
-    .call-to-action-banner {
-        padding: 9rem 25rem;
-    }
-}
-
 /*----------------------------------------
 ### Newsletter Signup
 ----------------------------------------*/
@@ -386,8 +362,6 @@ button .button-secondary {
 .newsletter-signup .content {
     flex-direction: column;
     flex-basis: 30%;
-
-    border: solid black;
 }
 
 .newsletter-signup h6,
@@ -404,14 +378,12 @@ button .button-secondary {
 .newsletter-signup .form {  
     align-items: center;
     flex-basis: 70%;
-
-    border: solid black;
+    justify-content: flex-end;
 }
 
-form {
+.newsletter-signup form {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
 }
 
 .newsletter-signup input {
@@ -420,21 +392,11 @@ form {
     width: 80%;
     border: none;
     border-radius: 40px;
-    
-    padding: 0.5rem;
+    padding: 0.5rem 0.8rem;
 }
-
 
 .newsletter-signup button {
     margin-left: -30px;
-}
-
-
-@media (min-width: 1025px) {
-    .newsletter-signup {
-        padding: 3rem 25rem;
-    }
-
 }
 
 /*----------------------------------------
@@ -448,6 +410,14 @@ footer {
     padding: 3rem 5rem;
     justify-content: space-between;
     align-items: center;
+}
+
+footer div {
+    margin: 0.7rem 0;
+}
+
+footer .copyright {
+    text-align: center;
 }
 
 footer .social {
@@ -478,3 +448,98 @@ footer .social .social-item-3 {
 footer .social .social-item-4 {
     background-image: url('./assets/images/icons8-pinterest-50.png');
 }
+
+
+
+/*----------------------------------------
+### media queries
+----------------------------------------*/
+
+@media (max-width: 767px) {
+
+    header {
+        background-image: none !important;
+        background-color: rgba(0, 160, 223, 0.3);
+        text-align: center;
+    }
+
+    .cards,
+    .newsletter-signup {
+        flex-wrap: wrap;
+    }
+
+    .newsletter-signup,
+    footer {
+        padding: 3rem 5rem;
+        justify-content: center;
+    }
+
+    .newsletter-signup .content,
+    .newsletter-signup .form {
+        flex-basis: 100%;
+    }
+
+    .newsletter-signup .form button {
+        padding: 0.7rem;
+        margin-left: -12%;
+    }
+
+    footer {
+        flex-wrap: wrap-reverse;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    
+    header {
+        background-position: 70% 70% !important;
+    }
+
+    .call-to-action-banner {
+        padding: 7rem 12rem;
+    }
+
+    .newsletter-signup {
+        padding: 3rem 5rem;
+        gap: 6rem;
+    }
+}
+
+
+@media (min-width: 1024px) and (max-width: 1224px) {
+    section {
+        padding: 5rem 9rem;
+    }
+
+    .call-to-action-banner {
+        padding: 8rem 15rem;
+    }
+
+    .newsletter-signup {
+        padding: 3rem 9rem;
+    }
+
+    .newsletter-signup .form {
+        flex-basis: 60%;
+    }
+}
+
+
+@media (min-width: 1225px) {
+
+    section {
+        padding: 5rem 30rem;
+    }
+
+    .newsletter-signup {
+        padding: 3rem 25rem;
+        gap: 5rem;
+    }
+
+    form {
+        width: 60%;
+    }
+}
+
+
