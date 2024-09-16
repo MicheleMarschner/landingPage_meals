@@ -507,7 +507,7 @@ footer .social .social-item-4 {
 }
 
 
-@media (min-width: 1024px) and (max-width: 1224px) {
+@media (min-width: 1024px) and (max-width: 1400px) {
     section {
         padding: 5rem 9rem;
     }
@@ -526,7 +526,7 @@ footer .social .social-item-4 {
 }
 
 
-@media (min-width: 1225px) {
+@media (min-width: 1400px) {
 
     section {
         padding: 5rem 30rem;
